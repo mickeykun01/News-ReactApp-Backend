@@ -1,8 +1,9 @@
 const express = require('express');
 
-const fitnessAPI = require('../API/fitness')
+const fitnessController = require('../controllers/fitness')
 const fitness = express.Router();
 
-fitness.route('/fitness').get(fitnessAPI.apiController)
+
+fitness.route('/fitness').get(fitnessController.findInFitnessData)
 
 module.exports = fitness

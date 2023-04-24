@@ -1,8 +1,8 @@
 const express = require('express')
-const hollywoodAPI = require('../API/hollywood')
+const hollwoodController = require('../controllers/hollywood')
 
 const hollywood = express.Router();
 
-hollywood.route('/hollywood').get(hollywoodAPI.apiController);
+hollywood.route('/hollywood').get(hollwoodController.findInHollywoodData);
 
 module.exports = hollywood;
